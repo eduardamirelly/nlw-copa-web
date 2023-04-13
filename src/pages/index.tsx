@@ -25,6 +25,11 @@ export default function Home() {
             <span>+12.592</span> pessoas já estão usando
           </strong>
         </div>
+
+        <form>
+          <input type="text" required placeholder="Qual é o nome do seu bolão?" />
+          <button type="submit">Criar meu bolão</button>
+        </form>
       </main>
 
       <Image 
