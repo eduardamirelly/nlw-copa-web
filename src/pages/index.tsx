@@ -6,7 +6,7 @@ import iconCheckImg from '../assets/icon-check.svg';
 
 export default function Home() {
   return (
-    <div>
+    <div className="max-w-[1124px] mx-auto">
       <main>
 
         <Image 
