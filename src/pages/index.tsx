@@ -28,9 +28,19 @@ export default function Home() {
           </strong>
         </div>
 
-        <form>
-          <input type="text" required placeholder="Qual é o nome do seu bolão?" />
-          <button type="submit">Criar meu bolão</button>
+        <form className="mt-10 flex">
+          <input 
+            className="flex-1 px-6 py-4 rounded bg-gray-800 border border-gray-600"
+            type="text" 
+            required 
+            placeholder="Qual é o nome do seu bolão?" 
+          />
+          <button 
+            type="submit"
+            className="bg-yellow-500"
+          >
+            Criar meu bolão
+          </button>
         </form>
 
         <p>
