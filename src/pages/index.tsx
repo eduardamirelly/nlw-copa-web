@@ -70,7 +70,7 @@ export default function Home() {
 
             <div className="flex flex-col">
               <span className="font-bold text-2xl">+2.034</span>
-              <span>Bolões criados</span>
+              <span>Palpites enviados</span>
             </div>
           </div>
         </div>
