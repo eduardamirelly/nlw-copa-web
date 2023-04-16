@@ -24,6 +24,9 @@ module.exports = {
           900: '#121214',
         },
       },
+      backgroundImage: {
+        app: 'url(/app-bg.png)',
+      },
     },
   },
   plugins: [],
