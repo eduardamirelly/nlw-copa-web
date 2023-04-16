@@ -6,7 +6,7 @@ import iconCheckImg from '../assets/icon-check.svg';
 
 export default function Home() {
   return (
-    <div className="max-w-[1124px] h-screen mx-auto grid grid-cols-2 items-center">
+    <div className="max-w-[1124px] h-screen mx-auto grid grid-cols-2 items-center gap-28">
       <main>
         <Image 
           src={logoImg}
@@ -28,22 +28,22 @@ export default function Home() {
           </strong>
         </div>
 
-        <form className="mt-10 flex">
+        <form className="mt-10 flex gap-2">
           <input 
-            className="flex-1 px-6 py-4 rounded bg-gray-800 border border-gray-600"
+            className="flex-1 px-6 py-4 rounded bg-gray-800 border border-gray-600 text-sm"
             type="text" 
             required 
             placeholder="Qual é o nome do seu bolão?" 
           />
           <button 
             type="submit"
-            className="bg-yellow-500"
+            className="bg-yellow-500 px-6 py-4 rounded font-bold text-gray-900 text-sm uppercase hover:bg-yellow-700 transition-colors"
           >
             Criar meu bolão
           </button>
         </form>
 
-        <p>
+        <p className="text-gray-300 mt-4 text-sm leading-relaxed">
           Após criar seu bolão, você receberá um código único que poderá usar para convidar outras pessoas 🚀
         </p>
 
