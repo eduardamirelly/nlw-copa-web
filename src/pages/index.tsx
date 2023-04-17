@@ -3,6 +3,7 @@ import appPreviewImg from '../assets/app-nlw-copa-preview.png';
 import logoImg from '../assets/logo.svg';
 import usersAvatarExampleImg from '../assets/users-avatar-example.png';
 import iconCheckImg from '../assets/icon-check.svg';
+import { api } from '@/lib/axios';
 
 interface HomeProps {
   poolCount: number;
@@ -89,12 +90,11 @@ export default function Home(props: HomeProps) {
 }
 
 export const getServerSideProps = async () => {
-  const response = await fetch('http://localhost:3333/pools/count');
-  const data = await response.json();
+  const poolCountResponse = await api.get('pools/count');
 
   return {
     props: {
-      poolCount: data.count,
+      poolCount: poolCountResponse.data.count,
     }
   }
 }
