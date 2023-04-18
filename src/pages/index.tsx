@@ -12,6 +12,10 @@ interface HomeProps {
 }
 
 export default function Home(props: HomeProps) {
+  function createPool() {
+
+  }
+
   return (
     <div className="max-w-[1124px] h-screen mx-auto grid grid-cols-2 items-center gap-28">
       <main>
@@ -35,7 +39,7 @@ export default function Home(props: HomeProps) {
           </strong>
         </div>
 
-        <form className="mt-10 flex gap-2">
+        <form onSubmit={createPool} className="mt-10 flex gap-2">
           <input 
             className="flex-1 px-6 py-4 rounded bg-gray-800 border border-gray-600 text-sm"
             type="text" 
