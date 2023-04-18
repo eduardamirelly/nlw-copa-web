@@ -7,6 +7,7 @@ import { api } from '@/lib/axios';
 
 interface HomeProps {
   poolCount: number;
+  guessCount: number;
 }
 
 export default function Home(props: HomeProps) {
@@ -74,7 +75,7 @@ export default function Home(props: HomeProps) {
             />
 
             <div className="flex flex-col">
-              <span className="font-bold text-2xl">+2.034</span>
+              <span className="font-bold text-2xl">+{props.guessCount}</span>
               <span>Palpites enviados</span>
             </div>
           </div>
@@ -91,10 +92,12 @@ export default function Home(props: HomeProps) {
 
 export const getServerSideProps = async () => {
   const poolCountResponse = await api.get('pools/count');
+  const guessesCountResponse = await api.get('guesses/count');
 
   return {
     props: {
       poolCount: poolCountResponse.data.count,
+      guessCount: guessesCountResponse.data.count,
     }
   }
 }
