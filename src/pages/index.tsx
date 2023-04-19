@@ -28,6 +28,8 @@ export default function Home(props: HomeProps) {
       await navigator.clipboard.writeText(code);
 
       alert('Bolão criado com sucesso, o código foi copiado para a sua área de transferência!');
+
+      setPoolTitle('');
     } catch (err) {
       console.log(err);
       alert('Falha ao criar o bolão, tente novamente!');
@@ -64,6 +66,7 @@ export default function Home(props: HomeProps) {
             required 
             placeholder="Qual é o nome do seu bolão?" 
             onChange={event => setPoolTitle(event.target.value)}
+            value={poolTitle}
           />
           <button 
             type="submit"
