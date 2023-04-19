@@ -24,6 +24,10 @@ export default function Home(props: HomeProps) {
       });
 
       const { code } = response.data;
+
+      await navigator.clipboard.writeText(code);
+
+      alert('Bolão criado com sucesso, o código foi copiado para a sua área de transferência!');
     } catch (err) {
       console.log(err);
       alert('Falha ao criar o bolão, tente novamente!');
